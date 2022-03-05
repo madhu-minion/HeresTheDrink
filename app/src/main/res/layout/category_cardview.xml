@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <com.google.android.material.card.MaterialCardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_below="@+id/scroll_view"
+        app:cardElevation="5dp"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:id="@+id/card"
+    android:layout_margin="20dp"
+        app:cardCornerRadius="8dp"
+        app:strokeWidth="1dp"
+        app:cardBackgroundColor="@color/black"
+        app:strokeColor="@color/skin">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/idTVCourse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:text="Name" />
+
+    </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "168863132110",
+    "project_id": "heresthedrink-a5afb",
+    "storage_bucket": "heresthedrink-a5afb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:168863132110:android:c934b93ce43edc8deb639f",
+        "android_client_info": {
+          "package_name": "com.greymatter.heresthedrink"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "168863132110-n5s77n9832irkc8djtbc2qoql0qbl785.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.greymatter.heresthedrink",
+            "certificate_hash": "99ffa3b17f4a29937f7da00a7cea7b18b9c350b0"
+          }
+        },
+        {
+          "client_id": "168863132110-hhfa8vosphc1clsrthibko67hdq1nj31.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0U6b3NCqB5dhMFR9r6ePavfzrgBh81tE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "168863132110-hhfa8vosphc1clsrthibko67hdq1nj31.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
