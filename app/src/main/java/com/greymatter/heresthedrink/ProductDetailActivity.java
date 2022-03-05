@@ -1,16 +1,14 @@
 package com.greymatter.heresthedrink;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.gson.Gson;
-import com.greymatter.heresthedrink.model.Category;
 import com.greymatter.heresthedrink.model.Drink;
 import com.squareup.picasso.Picasso;
 
@@ -43,5 +41,9 @@ public class ProductDetailActivity extends AppCompatActivity {
         startActivity(new Intent(getApplicationContext(),BluePrintActivity.class)
                 .putExtra("url",drink.getBlueprint())
         );
+    }
+
+    public void back_btn(View view) {
+        onBackPressed();
     }
 }

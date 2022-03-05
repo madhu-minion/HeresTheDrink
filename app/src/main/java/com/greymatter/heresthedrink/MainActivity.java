@@ -3,6 +3,7 @@ package com.greymatter.heresthedrink;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
@@ -74,12 +75,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void getCategory() {
+        ProgressDialog progressDialog = new ProgressDialog(getApplicationContext());
+        progressDialog.setMessage("Loading....");
+        progressDialog.show();
         final FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference ref = database.getReference("category");
 
         ref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+                progressDialog.dismiss();
                 if (dataSnapshot.exists()){
 
                     categoryList.clear();

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -44,6 +45,13 @@ public class ProductListActivity extends AppCompatActivity {
         product_recycler.setAdapter(drinkAdapter);
 
         getDrinks();
+
+        findViewById(R.id.back_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
     }
 
     private void getDrinks() {
@@ -51,6 +59,7 @@ public class ProductListActivity extends AppCompatActivity {
         DatabaseReference ref = database.getReference("drinks");
 
         ref.orderByChild("category_id").equalTo(category.getId()).addValueEventListener(new ValueEventListener() {
+
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists()){

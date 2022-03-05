@@ -10,9 +10,17 @@
     <LinearLayout
         android:id="@+id/drawable"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="200dp"
         android:background="@drawable/rectangle_cornerradius"
-        android:orientation="vertical" />
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="40dp"
+            android:src="@drawable/wine" />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -32,7 +40,8 @@
                 android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/skin"/>
+                android:singleLine="true"
+                android:textColor="@color/skin" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -42,23 +51,27 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/name"
             android:layout_margin="10dp"
-            android:hint="Password">
+            android:hint="Password"
+            app:endIconMode="password_toggle">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/pass"
+                android:singleLine="true"
+                android:maxLength="10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="textPassword"
                 android:textColor="@color/skin" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:layout_marginTop="30dp"
-            android:layout_gravity="center"
             android:id="@+id/login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
             android:insetTop="0dp"
             android:insetBottom="0dp"
             android:text="Login"

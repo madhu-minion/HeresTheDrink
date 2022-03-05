@@ -3,6 +3,7 @@ package com.greymatter.heresthedrink;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -47,11 +48,16 @@ public class RegisterActivity extends AppCompatActivity {
                             .addOnCompleteListener(RegisterActivity.this, new OnCompleteListener<AuthResult>() {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
+                                    ProgressDialog progressDialog = new ProgressDialog(getApplicationContext());
+                                    progressDialog.setMessage("Loading....");
+                                    progressDialog.show();
                                     if (task.isSuccessful()) {
+                                        progressDialog.dismiss();
                                         Intent intent = new Intent(RegisterActivity.this,MainActivity.class);
                                         startActivity(intent);
                                         finish();
                                     } else {
+                                        progressDialog.dismiss();
                                         Toast.makeText(RegisterActivity.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
                                     }
                                 }
@@ -80,5 +86,8 @@ public class RegisterActivity extends AppCompatActivity {
             return false;
         }
         return true;
+    }
+    public void navRegister(View view) {
+        startActivity(new Intent(getApplicationContext(),LoginActivity.class));
     }
 }

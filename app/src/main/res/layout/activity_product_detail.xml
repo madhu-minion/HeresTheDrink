@@ -16,6 +16,7 @@
         android:padding="10dp">
 
         <ImageView
+            android:onClick="back_btn"
             android:id="@+id/back_btn"
             android:layout_width="40dp"
             android:layout_height="30dp"
@@ -117,9 +118,9 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
+        android:onClick="openBlueprint"
         android:text="Locate in store"
         android:textAllCaps="true"
-        android:onClick="openBlueprint"
         android:textColor="@color/white"
         android:textStyle="bold" />
 
