@@ -14,59 +14,80 @@
         android:background="@drawable/rectangle_cornerradius"
         android:orientation="vertical" />
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/drawable"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingTop="30dp">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/name"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            app:boxStrokeColor="@color/white"
             android:hint="Email">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/skindarkshade"
-                app:boxStrokeColor="@color/skin"
-                android:textColorHint="@color/skin" />
+                android:textColor="@color/skin"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/email"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/name"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
-            android:hint="Password"
-            app:boxStrokeColor="@color/skin">
+            android:layout_margin="10dp"
+            android:hint="Password">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/pass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/skin"
-                android:textColorHint="@color/skin" />
+                android:textColor="@color/skin" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:id="@+id/getstarted"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
+            android:id="@+id/login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="150dp"
-            android:background="@color/skin"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
             android:text="Login"
-            android:textColor="@color/black" />
-    </RelativeLayout>
+            android:textColor="@color/black"
+            app:cornerRadius="10dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:padding="20dp"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't have an account? "/>
+
+        <TextView
+            android:textColor="@color/skin"
+            android:onClick="navRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register"/>
+
+    </LinearLayout>
+
 </RelativeLayout>

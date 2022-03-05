@@ -3,6 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android_Projects/Drink/app/src/main/res/drawable/edittext.xml" value="0.1815" />
+        <entry key="..\:/Android_Projects/Drink/app/src/main/res/layout/activity_blue_print.xml" value="0.2" />
+        <entry key="..\:/Android_Projects/Drink/app/src/main/res/layout/activity_login.xml" value="0.22" />
+        <entry key="..\:/Android_Projects/Drink/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Android_Projects/Drink/app/src/main/res/layout/activity_product_detail.xml" value="0.2" />
+        <entry key="..\:/Android_Projects/Drink/app/src/main/res/layout/activity_product_list.xml" value="0.2" />
+        <entry key="..\:/Android_Projects/Drink/app/src/main/res/layout/activity_register.xml" value="0.22" />
+        <entry key="..\:/Android_Projects/Drink/app/src/main/res/layout/activity_splash.xml" value="0.2" />
+        <entry key="..\:/Android_Projects/Drink/app/src/main/res/layout/category_cardview.xml" value="0.2" />
+        <entry key="..\:/Android_Projects/Drink/app/src/main/res/layout/product_layout.xml" value="0.22" />
         <entry key="..\:/android_project/HeresTheDrink/app/src/main/res/drawable/bottle_wine.xml" value="0.19166666666666668" />
         <entry key="..\:/android_project/HeresTheDrink/app/src/main/res/drawable/rectangle_cornerradius.xml" value="0.19166666666666668" />
         <entry key="..\:/android_project/HeresTheDrink/app/src/main/res/drawable/search_icon.xml" value="0.1" />
