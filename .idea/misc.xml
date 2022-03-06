@@ -6,11 +6,12 @@
         <entry key="..\:/android_project/HeresTheDrink/app/src/main/res/drawable/bottle_wine.xml" value="0.19166666666666668" />
         <entry key="..\:/android_project/HeresTheDrink/app/src/main/res/drawable/rectangle_cornerradius.xml" value="0.19166666666666668" />
         <entry key="..\:/android_project/HeresTheDrink/app/src/main/res/drawable/search_icon.xml" value="0.1" />
-        <entry key="..\:/android_project/HeresTheDrink/app/src/main/res/layout/activity_login.xml" value="0.16666666666666666" />
-        <entry key="..\:/android_project/HeresTheDrink/app/src/main/res/layout/activity_main.xml" value="0.16666666666666666" />
-        <entry key="..\:/android_project/HeresTheDrink/app/src/main/res/layout/activity_product_detail.xml" value="0.3333333333333333" />
-        <entry key="..\:/android_project/HeresTheDrink/app/src/main/res/layout/activity_product_list.xml" value="0.16666666666666666" />
-        <entry key="..\:/android_project/HeresTheDrink/app/src/main/res/layout/activity_register.xml" value="0.22" />
+        <entry key="..\:/android_project/HeresTheDrink/app/src/main/res/layout/activity_blue_print.xml" value="0.17552083333333332" />
+        <entry key="..\:/android_project/HeresTheDrink/app/src/main/res/layout/activity_login.xml" value="0.3333333333333333" />
+        <entry key="..\:/android_project/HeresTheDrink/app/src/main/res/layout/activity_main.xml" value="0.3333333333333333" />
+        <entry key="..\:/android_project/HeresTheDrink/app/src/main/res/layout/activity_product_detail.xml" value="0.22" />
+        <entry key="..\:/android_project/HeresTheDrink/app/src/main/res/layout/activity_product_list.xml" value="0.3333333333333333" />
+        <entry key="..\:/android_project/HeresTheDrink/app/src/main/res/layout/activity_register.xml" value="0.3333333333333333" />
         <entry key="..\:/android_project/HeresTheDrink/app/src/main/res/layout/activity_splash.xml" value="0.22" />
         <entry key="..\:/android_project/HeresTheDrink/app/src/main/res/layout/activity_welcome.xml" value="0.22" />
         <entry key="..\:/android_project/HeresTheDrink/app/src/main/res/layout/category_cardview.xml" value="0.22" />

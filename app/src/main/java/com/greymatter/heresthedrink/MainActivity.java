@@ -75,18 +75,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void getCategory() {
-        ProgressDialog progressDialog = new ProgressDialog(getApplicationContext());
-        progressDialog.setMessage("Loading....");
-        progressDialog.show();
         final FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference ref = database.getReference("category");
+        ProgressDialog progressDialog = new ProgressDialog(getApplicationContext());
 
         ref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                progressDialog.dismiss();
                 if (dataSnapshot.exists()){
-
                     categoryList.clear();
                     for (DataSnapshot snapshot : dataSnapshot.getChildren()){
                         Category category = snapshot.getValue(Category.class);
