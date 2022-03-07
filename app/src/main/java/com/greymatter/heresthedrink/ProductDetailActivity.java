@@ -32,7 +32,7 @@ public class ProductDetailActivity extends AppCompatActivity {
 
         name.setText(drink.getName());
         desc.setText(drink.getDescription());
-        price.setText("₹"+drink.getPrice());
+        price.setText(drink.getPrice() + "kr");
 
         Picasso.get().load(drink.getImage()).into(image);
     }

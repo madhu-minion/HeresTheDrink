@@ -34,9 +34,8 @@
             android:textStyle="bold" />
 
         <ImageView
-            android:visibility="gone"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_gravity="center"
             android:src="@drawable/search_btn" />
 
@@ -87,7 +86,7 @@
                 android:layout_marginRight="15dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginBottom="15dp"
-                android:text="30:-"
+                android:text="30 kr"
                 android:textSize="25dp"
                 android:textColor="@color/white"
                 android:textStyle="bold" />
@@ -110,7 +109,7 @@
 
     <Button
         android:id="@+id/locate_product"
-        android:layout_width="match_parent"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
@@ -121,7 +120,11 @@
         android:onClick="openBlueprint"
         android:text="Locate in store"
         android:textAllCaps="true"
+        app:strokeColor="@color/skin"
+        app:strokeWidth="3dp"
         android:textColor="@color/white"
+        style="?attr/materialButtonOutlinedStyle"
         android:textStyle="bold" />
+
 
 </RelativeLayout>

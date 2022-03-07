@@ -63,11 +63,11 @@ public class LoginActivity extends AppCompatActivity {
 
     private boolean isValid() {
         if(emailId.isEmpty()){
-            email_et.setError("Invalid Emailid");
+            email_et.setError("Invalid EmailID");
             return false;
         }
         if (password.length() != 8){
-            password_et.setError("Invalid password");
+            password_et.setError("Password must be 8-16 characters");
             return false;
         }
         return true;

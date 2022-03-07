@@ -9,12 +9,12 @@
     tools:context=".SplashActivity">
 
     <ImageView
-        android:id="@+id/bottle"
+        android:id="@+id/logo"
         android:layout_width="191dp"
         android:layout_height="197dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="150dp"
-        android:src="@drawable/beer" />
+        android:src="@drawable/logo" />
     <TextView
         android:id="@+id/heresthedrink"
         android:layout_width="wrap_content"

@@ -19,15 +19,15 @@
             android:layout_height="200dp"
             android:layout_gravity="right"
             android:layout_marginRight="40dp"
-            android:src="@drawable/wine" />
+            android:src="@drawable/login_logo" />
     </LinearLayout>
 
     <LinearLayout
-        android:paddingTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/drawable"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingTop="20dp">
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -37,12 +37,11 @@
             android:hint="Name">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/name_et"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/name_et"
                 android:singleLine="true"
-                android:textColor="@color/skin"
-                />
+                android:textColor="@color/skin" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -54,12 +53,11 @@
             android:hint="Email">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/email_et"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/email_et"
                 android:singleLine="true"
-                android:textColor="@color/skin"
-                />
+                android:textColor="@color/skin" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -70,14 +68,13 @@
             android:hint="Phone number">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/phnum_et"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number"
-                android:singleLine="true"
                 android:maxLength="10"
-                android:id="@+id/phnum_et"
-                android:textColor="@color/skin"
-                />
+                android:singleLine="true"
+                android:textColor="@color/skin" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -86,31 +83,30 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/phnum"
             android:layout_margin="10dp"
-            app:endIconMode="password_toggle"
-        android:hint="Password">
+            android:hint="Password"
+            app:endIconMode="password_toggle">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/pass_et"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/pass_et"
-                android:singleLine="true"
-                android:maxLength="10"
                 android:inputType="textPassword"
-                android:textColor="@color/skin"
-                />
+                android:maxLength="16"
+                android:singleLine="true"
+                android:textColor="@color/skin" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:layout_marginTop="20dp"
-            android:layout_gravity="center"
             android:id="@+id/register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Register"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
             android:insetTop="0dp"
             android:insetBottom="0dp"
-            app:cornerRadius="10dp"
-            android:textColor="@color/black" />
+            android:text="Register"
+            android:textColor="@color/black"
+            app:cornerRadius="10dp" />
 
     </LinearLayout>
 

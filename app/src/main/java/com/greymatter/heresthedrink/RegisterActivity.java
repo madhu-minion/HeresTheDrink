@@ -74,15 +74,15 @@ public class RegisterActivity extends AppCompatActivity {
             return false;
         }
         if(emailId.isEmpty()){
-            email_et.setError("Invalid Emailid");
+            email_et.setError("Invalid EmailID");
             return false;
         }
         if (mobileNumber.length() != 10){
             mobilenum_et.setError("Invalid mobile number");
             return false;
         }
-        if (password.length() != 8){
-            password_et.setError("Invalid password");
+        if (password.length() < 8){
+            password_et.setError("Password must be 8-16 characters");
             return false;
         }
         return true;
