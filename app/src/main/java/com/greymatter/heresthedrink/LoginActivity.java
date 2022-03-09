@@ -61,7 +61,7 @@ public class LoginActivity extends AppCompatActivity {
                             startActivity(intent);
                             finish();
                         } else {
-                            Toast.makeText(LoginActivity.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
@@ -72,7 +72,7 @@ public class LoginActivity extends AppCompatActivity {
             email_et.setError("Invalid EmailID");
             return false;
         }
-        if (password.length() != 8){
+        if (password.length() < 8){
             password_et.setError("Password must be 8-16 characters");
             return false;
         }

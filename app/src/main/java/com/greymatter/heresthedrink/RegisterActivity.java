@@ -24,6 +24,7 @@ public class RegisterActivity extends AppCompatActivity {
     String name, mobileNumber,emailId,password;
     EditText name_et, mobilenum_et,email_et,password_et;
     private FirebaseAuth mAuth;
+    private ProgressDialog progressDialog;
 
 
     @Override
@@ -56,7 +57,7 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private void register() {
-        ProgressDialog progressDialog = new ProgressDialog(RegisterActivity.this);
+        progressDialog = new ProgressDialog(RegisterActivity.this);
         progressDialog.setTitle("Loading....");
         progressDialog.show();
 
@@ -64,12 +65,12 @@ public class RegisterActivity extends AppCompatActivity {
                 .addOnCompleteListener(RegisterActivity.this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        progressDialog.dismiss();
 
                         if (task.isSuccessful()) {
                             saveData();
                         } else {
-                            Toast.makeText(RegisterActivity.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
+                            progressDialog.dismiss();
+                            Toast.makeText(RegisterActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
@@ -89,6 +90,8 @@ public class RegisterActivity extends AppCompatActivity {
         ref.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).updateChildren(map).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
+                progressDialog.dismiss();
+
                 if (task.isSuccessful()){
                     Intent intent = new Intent(RegisterActivity.this,MainActivity.class);
                     startActivity(intent);
