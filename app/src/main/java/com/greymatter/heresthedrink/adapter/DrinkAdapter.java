@@ -49,7 +49,7 @@ public class DrinkAdapter extends RecyclerView.Adapter<DrinkAdapter.ViewHolder>{
         Drink model = drinkList.get(position);
 
         holder.name.setText(model.getName());
-        holder.price.setText("₹"+model.getPrice());
+        holder.price.setText(model.getPrice()+"kr");
 
         Picasso.get().load(model.getImage()).into(holder.image);
 

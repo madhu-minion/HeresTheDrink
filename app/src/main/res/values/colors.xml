@@ -14,4 +14,6 @@
 
     <color name="skindarkshade">#ecbcb4</color>
     <color name="logo">#E8BCB1</color>
+    <color name="green">#43A047</color>
+    <color name="red">#E53935</color>
 </resources>

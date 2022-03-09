@@ -15,7 +15,7 @@ import com.squareup.picasso.Picasso;
 public class ProductDetailActivity extends AppCompatActivity {
 
     Drink drink;
-    TextView name,desc,price;
+    TextView name,desc,price,status;
     ImageView image;
 
     @Override
@@ -27,6 +27,7 @@ public class ProductDetailActivity extends AppCompatActivity {
         desc = findViewById(R.id.desc);
         price = findViewById(R.id.price);
         image = findViewById(R.id.image);
+        status = findViewById(R.id.status);
 
         drink = new Gson().fromJson(getIntent().getStringExtra("drink"), Drink.class);
 
@@ -35,6 +36,15 @@ public class ProductDetailActivity extends AppCompatActivity {
         price.setText(drink.getPrice() + "kr");
 
         Picasso.get().load(drink.getImage()).into(image);
+
+        if (drink.isStock_status()){
+            status.setText("Available");
+            status.setTextColor(getResources().getColor(R.color.green));
+        }else {
+            status.setText("Not Available");
+            status.setTextColor(getResources().getColor(R.color.red));
+        }
+
     }
 
     public void openBlueprint(View view) {

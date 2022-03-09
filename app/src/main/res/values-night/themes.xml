@@ -16,4 +16,10 @@
         <item name="fontFamily">@font/engagement</item>
         <item name="android:letterSpacing">0.15</item>
     </style>
+
+    <style name="EngagementTheme" parent="Theme.HeresTheDrink">
+        <item name="fontFamily">@font/engagement</item>
+        <item name="android:letterSpacing">0.15</item>
+    </style>
+
 </resources>

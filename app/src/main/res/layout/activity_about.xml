@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="2"
-            android:text="ABout Us"
+            android:text="About Us"
             android:textAlignment="center"
             android:textColor="@color/skin"
             android:textSize="24sp"
@@ -85,6 +85,15 @@
             android:text="heresdrink@gmail.com"
             android:textSize="20sp"
             android:textColor="@color/skin"/>
+
+        <TextView
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="+917013545341"
+            android:textSize="20sp"
+            android:textColor="@color/skin"/>
+
 
     </LinearLayout>
 

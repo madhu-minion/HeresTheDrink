@@ -15,6 +15,7 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -25,6 +26,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.gson.Gson;
 import com.greymatter.heresthedrink.adapter.CategoryAdapter;
 import com.greymatter.heresthedrink.model.Category;
 import com.greymatter.heresthedrink.sensor.ShakeListener;
@@ -76,6 +78,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             @Override
             public void afterTextChanged(Editable editable) {
 
+            }
+        });
+
+        findViewById(R.id.search_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),AllProductActivity.class)
+                );
             }
         });
     }

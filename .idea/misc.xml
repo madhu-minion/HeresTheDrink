@@ -9,10 +9,11 @@
         <entry key="..\:/Android_Projects/Drink/app/src/main/res/drawable/ic_launcher_background.xml" value="0.181" />
         <entry key="..\:/Android_Projects/Drink/app/src/main/res/drawable/rectangle_cornerradius.xml" value="0.181" />
         <entry key="..\:/Android_Projects/Drink/app/src/main/res/layout/activity_about.xml" value="0.2" />
+        <entry key="..\:/Android_Projects/Drink/app/src/main/res/layout/activity_all_product.xml" value="0.2" />
         <entry key="..\:/Android_Projects/Drink/app/src/main/res/layout/activity_blue_print.xml" value="0.2" />
         <entry key="..\:/Android_Projects/Drink/app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="..\:/Android_Projects/Drink/app/src/main/res/layout/activity_main.xml" value="0.2" />
-        <entry key="..\:/Android_Projects/Drink/app/src/main/res/layout/activity_product_detail.xml" value="0.2" />
+        <entry key="..\:/Android_Projects/Drink/app/src/main/res/layout/activity_product_detail.xml" value="0.22" />
         <entry key="..\:/Android_Projects/Drink/app/src/main/res/layout/activity_product_list.xml" value="0.2" />
         <entry key="..\:/Android_Projects/Drink/app/src/main/res/layout/activity_profile.xml" value="0.2" />
         <entry key="..\:/Android_Projects/Drink/app/src/main/res/layout/activity_register.xml" value="0.22" />

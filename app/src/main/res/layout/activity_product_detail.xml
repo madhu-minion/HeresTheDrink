@@ -70,6 +70,15 @@
                 android:src="@drawable/drinks" />
 
             <TextView
+                android:layout_gravity="end"
+                android:layout_marginEnd="10dp"
+                android:id="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Available"
+                android:textColor="@color/green"/>
+
+            <TextView
                 android:id="@+id/name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
