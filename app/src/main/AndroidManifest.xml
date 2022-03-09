@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HeresTheDrink">
         <activity
+            android:name=".AboutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SearchActivity"
+            android:exported="false" />
+        <activity
             android:name=".BluePrintActivity"
             android:exported="false" />
         <activity
@@ -39,6 +48,15 @@
         <activity
             android:name=".MainActivity"
             android:exported="true" />
+
+        <service
+            android:name=".fcm.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
     </application>
 
 </manifest>

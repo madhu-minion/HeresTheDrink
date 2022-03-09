@@ -31,6 +31,11 @@ public class DrinkAdapter extends RecyclerView.Adapter<DrinkAdapter.ViewHolder>{
         this.drinkList = drinkList;
     }
 
+    public void updateList(List<Drink> temp) {
+        drinkList = temp;
+        notifyDataSetChanged();
+    }
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

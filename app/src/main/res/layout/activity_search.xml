@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".ProductListActivity">
+    tools:context=".SearchActivity">
 
     <LinearLayout
         android:id="@+id/top"
@@ -23,24 +23,30 @@
             android:layout_gravity="center"
             android:src="@drawable/backbtn" />
 
-        <TextView
-            android:id="@+id/category_name"
-            android:layout_width="match_parent"
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="2"
-            android:text="Whisky"
-            android:textAlignment="center"
-            android:textColor="@color/skin"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+            android:layout_weight="1"
+            android:layout_marginHorizontal="10dp"
+            android:hint="Search for..."
+            android:textColorHint="@color/skindarkshade"
+            app:boxCornerRadiusBottomEnd="35dp"
+            app:boxCornerRadiusBottomStart="35dp"
+            app:boxCornerRadiusTopEnd="35dp"
+            app:boxCornerRadiusTopStart="35dp"
+            app:startIconDrawable="@drawable/search_btn"
+            app:startIconTint="@color/skindarkshade">
 
-        <ImageView
-            android:id="@+id/search"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center"
-            android:src="@drawable/search_btn" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/search_bar_et"
+                android:textColor="@color/skin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
     </LinearLayout>
 
     <View

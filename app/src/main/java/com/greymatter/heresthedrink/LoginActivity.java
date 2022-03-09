@@ -25,40 +25,46 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        email_et = findViewById(R.id.email);
+        password_et = findViewById(R.id.pass);
         mAuth = FirebaseAuth.getInstance();
 
         findViewById(R.id.login).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                email_et = findViewById(R.id.email);
-                password_et = findViewById(R.id.pass);
 
                 emailId = email_et.getText().toString().trim();
                 password = password_et.getText().toString().trim();
 
                 if(isValid()){
-                    mAuth.signInWithEmailAndPassword(emailId, password)
-                            .addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
-                                @Override
-                                public void onComplete(@NonNull Task<AuthResult> task) {
-                                    ProgressDialog progressDialog = new ProgressDialog(getApplicationContext());
-                                    progressDialog.setMessage("Loading");
-                                    progressDialog.show();
-                                    if (task.isSuccessful()) {
-                                        progressDialog.dismiss();
-                                        Intent intent = new Intent(LoginActivity.this,MainActivity.class);
-                                        startActivity(intent);
-                                        finish();
-                                    } else {
-                                        progressDialog.dismiss();
-                                        Toast.makeText(LoginActivity.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
-                                    }
-                                }
-                            });
+                    login();
                 }
             }
         });
 
+    }
+
+    private void login() {
+        ProgressDialog progressDialog = new ProgressDialog(LoginActivity.this);
+        progressDialog.setTitle("Loading...");
+        progressDialog.show();
+
+        mAuth.signInWithEmailAndPassword(emailId, password)
+                .addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        progressDialog.dismiss();
+
+                        if (task.isSuccessful()) {
+                            Intent intent = new Intent(LoginActivity.this,MainActivity.class);
+                            startActivity(intent);
+                            finish();
+                        } else {
+                            Toast.makeText(LoginActivity.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
     }
 
     private boolean isValid() {

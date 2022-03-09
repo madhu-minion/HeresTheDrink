@@ -16,7 +16,7 @@
 
         <ImageView
             android:layout_width="200dp"
-            android:layout_height="200dp"
+            android:layout_height="190dp"
             android:layout_gravity="right"
             android:layout_marginRight="40dp"
             android:src="@drawable/login_logo" />
